@@ -26,7 +26,7 @@ namespace Lone079
 			Exiled.Events.Handlers.Server.RoundStarted += ev.OnRoundStart;
 			Exiled.Events.Handlers.Player.Died += ev.OnPlayerDied;
 			Exiled.Events.Handlers.Player.Left += ev.OnPlayerLeave;
-			Exiled.Events.Handlers.Scp106.Containing += ev.OnScp106Contain;
+			Exiled.Events.Handlers.Player.Dying += ev.OnScp106Contain;
 			Exiled.Events.Handlers.Warhead.Detonated += ev.OnDetonated;
 			Exiled.Events.Handlers.Cassie.SendingCassieMessage += ev.OnCassie;
 		}
@@ -38,7 +38,7 @@ namespace Lone079
 			Exiled.Events.Handlers.Server.RoundStarted -= ev.OnRoundStart;
 			Exiled.Events.Handlers.Player.Died -= ev.OnPlayerDied;
 			Exiled.Events.Handlers.Player.Left -= ev.OnPlayerLeave;
-			Exiled.Events.Handlers.Scp106.Containing -= ev.OnScp106Contain;
+			Exiled.Events.Handlers.Player.Dying -= ev.OnScp106Contain;
 			Exiled.Events.Handlers.Warhead.Detonated -= ev.OnDetonated;
 			Exiled.Events.Handlers.Cassie.SendingCassieMessage -= ev.OnCassie;
 
@@ -48,5 +48,7 @@ namespace Lone079
 		}
 
 		public override string Name => "Lone079";
-	}
+
+        public override string Author => "Cyanox62 | Updated by KadotCom";
+    }
 }
